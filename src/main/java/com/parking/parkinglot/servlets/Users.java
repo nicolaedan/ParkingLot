@@ -17,9 +17,9 @@ public class Users extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<UserDto> users = userBean.findAllUsers();
-        request.setAttribute("users", users);
-        request.getRequestDispatcher("/WEB-INF/pages/users.jsp").forward(request, response);
+        List<UserDto> users=userBean.findAllUsers();
+        request.setAttribute("users",users);
+        request.getRequestDispatcher("/WEB-INF/pages/users.jsp").forward(request,response);
 
     }
 

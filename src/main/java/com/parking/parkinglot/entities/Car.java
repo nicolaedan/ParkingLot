@@ -5,8 +5,6 @@ import jakarta.persistence.*;
 @Entity
 public class Car {
     private Long id;
-   private String LICENSEPLATE;
-   private String PARKINGSPOT;
 
     public void setId(Long id) {
         this.id = id;
@@ -18,24 +16,29 @@ public class Car {
         return id;
     }
 
-    private User owner;
+    private String licensePlate;
 
     @Basic
-    public String getLICENSEPLATE() {
-        return LICENSEPLATE;
+    public String getLicensePlate() {
+        return licensePlate;
     }
 
-    public void setLICENSEPLATE(String LICENSEPLATE) {
-        this.LICENSEPLATE = LICENSEPLATE;
-    }
-@Basic
-    public String getPARKINGSPOT() {
-        return PARKINGSPOT;
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
     }
 
-    public void setPARKINGSPOT(String PARKINGSPOT) {
-        this.PARKINGSPOT = PARKINGSPOT;
+    private String parkingSpot;
+
+    @Basic
+    public String getParkingSpot() {
+        return parkingSpot;
     }
+
+    public void setParkingSpot(String parkingSpot) {
+        this.parkingSpot = parkingSpot;
+    }
+
+    private User owner;
 
     @ManyToOne
     public User getOwner() {
@@ -44,5 +47,6 @@ public class Car {
 
     public void setOwner(User owner) {
         this.owner = owner;
+
     }
 }

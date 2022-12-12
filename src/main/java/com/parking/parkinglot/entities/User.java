@@ -29,7 +29,6 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
-
     private String email;
     private String password;
 
@@ -50,6 +49,7 @@ public class User {
     }
 
     private Collection<Car> cars;
+
     @OneToMany(mappedBy="owner")
     public Collection<Car> getCars() {
         return cars;

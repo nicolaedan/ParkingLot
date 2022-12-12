@@ -11,6 +11,7 @@
             <a class="nav-link ${pageContext.request.requestURI.substring(pageContext.request.requestURI.lastIndexOf
 ("/")) eq '/about.jsp' ? ' active' : ''}" aria-current="page" href="${pageContext.request.contextPath}/about.jsp">About</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link ${pageContext.request.requestURI.substring(pageContext.request.requestURI.lastIndexOf
 ("/")) eq '/cars.jsp' ? ' active' : ''}" aria-current="page" href="${pageContext.request.contextPath}/Cars">Cars</a>
@@ -19,6 +20,7 @@
             <a class="nav-link ${pageContext.request.requestURI.substring(pageContext.request.requestURI.lastIndexOf
 ("/")) eq '/users.jsp' ? ' active' : ''}" aria-current="page" href="${pageContext.request.contextPath}/Users">Users</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
@@ -26,14 +28,13 @@
             <a class="nav-link disabled">Disabled</a>
           </li>
         </ul>
-
-<ul class="navbar-nav">
-  <li class="nav-item">
-    <a class="nav-link" href="${pageContext.request.contextPath}/Login">Login</a>
-  </li>
-</ul>
-
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="${pageContext.request.contextPath}/Login">Login</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
 </header>
+
