@@ -1,10 +1,17 @@
 package com.parking.parkinglot.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class UserGroup {
     Long id;
     String username;
     String userGroup;
 
+    @Id
+    @GeneratedValue
     public Long getId() {
         return id;
     }
