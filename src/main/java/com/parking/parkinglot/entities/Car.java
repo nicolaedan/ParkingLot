@@ -1,10 +1,17 @@
 package com.parking.parkinglot.entities;
 
 import jakarta.persistence.*;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Car {
     private Long id;
+
+
+
+    public void setPhoto(CarPhoto photo) {
+        this.photo = photo;
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -48,5 +55,11 @@ public class Car {
     public void setOwner(User owner) {
         this.owner = owner;
 
+    }
+    private CarPhoto photo;
+
+    @OneToOne(mappedBy = "car", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    public CarPhoto getPhoto() {
+        return photo;
     }
 }
